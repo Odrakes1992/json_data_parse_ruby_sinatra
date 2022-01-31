@@ -1,1 +1,11 @@
-<%= @json_data%>
+
+<h1 style = 'text-align: center'> Results for - <%=@data.location.upcase%><h1>
+
+<div style = 'text-align: center'>
+<% if @data.result.length == 0 %>
+<p> There are no models available for that location. </p>
+<%else%>
+<p> These are our available models :</p>
+<%= @data.result.join(", ")%>
+<%end %>
+<div>

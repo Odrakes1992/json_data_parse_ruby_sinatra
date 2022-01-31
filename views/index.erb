@@ -1,15 +1,15 @@
-<h1> Welcome to the Data Parser </h1> <br>
+<h1 style = 'text-align: center'> Welcome to the Data Parser </h1> <br>
 
-<p> Please upload a JSON array and a location to filter by. The results will be displayed after you click enter. </p> <br>
+<p style = 'text-align: center'> Please upload a JSON array and a location to filter by. The results for the available models will be displayed after you click enter. </p> <br>
 
-
-<form action="/conversion" method="post" >
-<label for="json-data">
-JSON array 
-<input type="text" name="json_data" > <br>
-<label for="location"> <br/>
-Location of talent
-<input type="text" name="location">
-
-<input type="submit" value="submit">
-</form>
+<div style = 'text-align: center'>
+  <form action="/conversion" method="post" >
+    <label for="json-data">
+    JSON array 
+      <input type="text" name="json_data" style="height:120px; width:200px;"> <br>
+    <label for="location"> <br/>
+    Location of talent
+      <input type="text" name="location">
+    <input type="submit" value="submit">
+  </form>
+</div>

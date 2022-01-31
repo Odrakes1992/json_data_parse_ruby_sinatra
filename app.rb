@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader' 
 require 'sinatra/base'
+require './lib/data'
 
 class DataParser < Sinatra::Base
   configure :development do 
@@ -21,8 +22,10 @@ post '/conversion' do
 end
 
 get '/result' do
-  @json_data = session[:json_data]
-  @location = session[:location]
+  @data = Data.new(session[:location], session[:json_data])
+  @data.parse_data
+  #@json_data = session[:json_data]
+  #@location = session[:location]
   erb(:result)
 end
 
